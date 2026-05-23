@@ -1,33 +1,111 @@
-CAR DETAILS
+# 🚗 Used Car Price Prediction
 
-1.Data Preprocessing:
+## 📌 Project Overview
+This project analyzes used car market data and predicts vehicle prices using machine learning algorithms.
 
- *The dataset is read using pandas from a CSV file named "car details.csv".
- *Duplicates are removed from the DataFrame.
- *The "name" column is dropped.
- *Data types for "year", "km_driven", and "selling_price" columns are coerced to appropriate types.
- *Numeric and categorical features are separated.
+The goal is to help buyers and sellers estimate fair car prices based on vehicle features such as brand, mileage, fuel type, transmission, and manufacturing year.
 
-2.Preprocessing Pipelines:
+---
 
- *Separate preprocessing pipelines are defined for numeric and categorical features.
- *For numeric features, missing values are imputed using median and then scaled using MinMaxScaler.
- *For categorical features, missing values are imputed with a constant value and then one-hot encoded.
+## 🎯 Business Problem
+Used car pricing is often inconsistent and influenced by multiple factors.
 
-3.Data Visualization:
+This project helps:
+- Buyers avoid overpaying
+- Sellers estimate competitive prices
+- Dealerships improve pricing strategies
 
- *Various histograms, scatter plots, and count plots are created to visualize the distributions and relationships between different variables in the dataset.
+---
 
-4.Modeling:
+## 📊 Dataset
+The dataset contains information about used cars, including:
+- Car Brand
+- Year
+- Fuel Type
+- Transmission
+- Kilometers Driven
+- Owner Type
+- Mileage
+- Engine Capacity
+- Selling Price
 
- *Three regression models (Linear Regression, Decision Tree Regression, and Random Forest Regression) are initialized.
- *For each model, the dataset is split into training and testing sets, preprocessed, and then fitted to the model.
- *Mean squared error (MSE) and R-squared (R^2) scores are computed for each model on the test set.
- *Trained models are saved using joblib.
+---
 
-5.Model Evaluation:
+## 🛠 Technologies Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
- *The Linear Regression model is loaded from the saved file.
- *Subset data (20 data points) is randomly sampled from the original dataset.
- *The subset data is preprocessed and used to make predictions using the loaded Linear Regression model.
- *MSE and R^2 scores are computed for the predictions on the subset data.
+---
+
+## 🔍 Workflow
+
+### 1️⃣ Data Cleaning
+- Handled missing values
+- Removed duplicates
+- Fixed inconsistent data
+
+### 2️⃣ Exploratory Data Analysis
+- Price distribution analysis
+- Brand-wise price comparison
+- Fuel type analysis
+- Correlation analysis
+
+### 3️⃣ Feature Engineering
+- Encoding categorical variables
+- Feature scaling
+
+### 4️⃣ Model Building
+Machine learning models used:
+- Linear Regression
+- Random Forest Regressor
+- Decision Tree Regressor
+
+### 5️⃣ Model Evaluation
+Evaluated model performance using:
+- R² Score
+- Mean Absolute Error
+- RMSE
+
+---
+
+## 📈 Results
+- Random Forest achieved the best prediction performance
+- Vehicle age and mileage strongly affected price
+- Premium brands retained value longer
+
+---
+
+## 📸 Visualizations
+
+### Car Price Distribution
+![Price Distribution](images/price_distribution.png)
+
+### Correlation Heatmap
+![Heatmap](images/heatmap.png)
+
+### Model Prediction Comparison
+![Predictions](images/prediction_chart.png)
+
+---
+
+## 💡 Key Insights
+- Newer vehicles had significantly higher resale value
+- Diesel cars showed higher average prices
+- Cars with lower mileage sold at premium prices
+
+---
+
+## 🚀 Future Improvements
+- Deploy model using Streamlit
+- Add live prediction web app
+- Use larger real-world datasets
+
+---
+
+## 👨‍💻 Author
+Sanjeet Bharti
